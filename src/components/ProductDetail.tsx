@@ -1,12 +1,11 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import products from "../data/products";
 import { ArrowBack, ShoppingCart } from "@mui/icons-material";
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const { addToCart } = useCart();
+  const { addToCart, products } = useCart();
 
   const product = products.find((p) => p.id === parseInt(id || "", 10));
 

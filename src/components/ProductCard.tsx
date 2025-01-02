@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Product } from "../data/products";
+import { Product } from "../context/CartContext";
 
 interface ProductCardProps {
   product: Product;
